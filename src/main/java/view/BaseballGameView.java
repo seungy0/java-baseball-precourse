@@ -10,7 +10,7 @@ public class BaseballGameView {
     }
 
     public int[] getUserNumbers() {
-        System.out.println("세 자리 정수를 입력하세요:");
+        System.out.print("세 자리 정수를 입력하세요: ");
         int[] userNumbers = new int[3];
         String input = scanner.nextLine();
 
@@ -44,5 +44,13 @@ public class BaseballGameView {
         }
 
         System.out.println();
+    }
+
+    public void displayMessage(String message) {
+        System.out.println(message);
+    }
+
+    public String getNextLine() {
+        return scanner.nextLine();
     }
 }
