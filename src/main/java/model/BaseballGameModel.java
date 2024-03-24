@@ -8,8 +8,16 @@ public class BaseballGameModel {
     public void generateNumbers() {
         Random random = new Random();
         baseballNumbers = new int[3];
+        boolean[] visited = new boolean[10];
+
         for (int i = 0; i < 3; i++) {
-            baseballNumbers[i] = random.nextInt(9) + 1;
+            int number = random.nextInt(9) + 1;
+            if (visited[number]) {
+                i--;
+                continue;
+            }
+            baseballNumbers[i] = number;
+            visited[number] = true;
         }
     }
 
