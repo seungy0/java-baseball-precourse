@@ -21,7 +21,7 @@ public class BaseballGameView {
             return userNumbers;
         }
 
-        System.out.println("잘못된 입력입니다. 다시 입력해주세요.");
+        System.out.println("[ERROR] 잘못된 입력입니다. 다시 입력해주세요.");
         return getUserNumbers();
     }
 

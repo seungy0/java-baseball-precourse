@@ -20,9 +20,9 @@ public class BaseballGameController {
 
             askNumbers();
 
-            view.displayMessage("게임을 계속 하시겠습니까? (Y/N)");
+            view.displayMessage("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
             String choice = view.getNextLine();
-            if (!choice.equalsIgnoreCase("Y")) {
+            if (!choice.equalsIgnoreCase("2")) {
                 view.displayMessage("게임을 종료합니다.");
                 break;
             }
@@ -36,7 +36,7 @@ public class BaseballGameController {
             view.displayResult(result);
 
             if (result[0] == 3) {
-                view.displayMessage("축하합니다! 숫자를 모두 맞히셨습니다.");
+                view.displayMessage("3개의 숫자를 모두 맞히셨습니다! 게임 끝");
                 break;
             }
         }
