@@ -18,7 +18,23 @@ public class BaseballGameModel {
     }
 
     public int[] compareNumbers(int[] userNumbers) {
-        // TODO: 사용자가 입력한 숫자와 컴퓨터가 생성한 숫자를 비교하여 결과를 반환
-        return null;
+        int[] result = new int[2]; // [0]은 스트라이크, [1]은 볼 개수
+        boolean[] visited = new boolean[10];
+
+        for (int i = 0; i < 3; i++) {
+            visited[baseballNumbers[i]] = true;
+        }
+
+        for (int i = 0; i < 3; i++) {
+            if (userNumbers[i] == baseballNumbers[i]) {
+                result[0]++; // 스트라이크
+                continue;
+            }
+            if (visited[userNumbers[i]]) {
+                result[1]++; // 볼
+            }
+        }
+
+        return result;
     }
 }
